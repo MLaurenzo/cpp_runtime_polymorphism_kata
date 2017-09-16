@@ -1,0 +1,1 @@
+# cpp_static_polymorphism_kata
