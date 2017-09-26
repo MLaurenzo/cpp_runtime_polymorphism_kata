@@ -36,10 +36,26 @@ private:
     unique_ptr<InternalInterface> m_internal;
 };
 
+struct Person
+{
+    Person(const string& firstname, const string& lastname)
+            : m_firstname(firstname)
+            , m_lastname(lastname)
+    {}
+    string m_firstname;
+    string m_lastname;
+};
+
+void print(const Person& p)
+{
+    cout << "Firstname: " << p.m_firstname << ", lastname: " << p.m_lastname << endl;
+}
+
 int main()
 {
     vector<Wrapper> v;
     v.emplace_back(string("I am using string class."));
+    v.emplace_back(Person("Laurent", "BERTHOLLE"));
 
     for_each(v.begin(), v.end(),
              [](const Wrapper& e) { print(e); }
