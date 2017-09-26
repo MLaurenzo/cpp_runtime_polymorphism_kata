@@ -1,6 +1,16 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
+
+#include "Wrapper.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello world" << std::endl;
+    vector<Wrapper> v;
+
+    for_each(v.begin(), v.end(),
+             [](Wrapper e) { e.print(); }
+    );
 }

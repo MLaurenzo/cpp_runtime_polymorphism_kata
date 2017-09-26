@@ -1,0 +1,10 @@
+#ifndef CPP_RUNTIME_POLYMORPHISM_KATA_WRAPPER_H
+#define CPP_RUNTIME_POLYMORPHISM_KATA_WRAPPER_H
+
+class Wrapper
+{
+public:
+    void print() const;
+};
+
+#endif //CPP_RUNTIME_POLYMORPHISM_KATA_WRAPPER_H
